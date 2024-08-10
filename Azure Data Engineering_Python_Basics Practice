@@ -170,7 +170,7 @@ tem = float(input("Enter the temperature"))
 #To convert from Fahrenheit to Celsius:(5/9)*(F-32)
 
 if converter == "Celsius":
-    F=(9/5)*(tem+32)
+    F=(9/5)* tem + 32 
     print(F)
 elif converter == "Fahrenheit":
     C=(5 / 9) * (tem - 32)
