@@ -1,3 +1,4 @@
+A - 1:
 Problem 1: Temperature Converter
 
 Scenario: Write a program that converts temperature from Fahrenheit to Celsius.
@@ -89,4 +90,134 @@ elif amount>100:
     print("The original price is : ",amount)
     print("The discount amount is :",discount_amt)
     print("The final price is :",final_price)
+
+A - 2:
+
+1. Grade Calculator
+
+
+Scenario: Create a program that calculates the final grade of a student based on their scores in various assessments. 
+The program should ask for the student's name, the scores for assignments, midterm, and final exam.
+ Then, it should calculate the total score based on weighted averages 
+ (e.g., assignments 30%, midterm 30%, final 40%) and assign a letter grade (A, B, C, D, F) based on the total score.
+
+
+stud_name = input("Enter the student name")
+score=int(input("Enter the score for assignments "))
+midterm = int(input("Enter the midterm score  "))
+final_exam= int(input("Enter the finalexam score "))
+
+calculate = score+midterm+final_exam
+if calculate>=90:
+    print("Garde is A")
+elif calculate>=80 and calculate <89:
+    print("Grade is B")
+
+elif calculate>=70 and calculate <79:
+    print("Grade is C")
+elif calculate>=60 and calculate<69:
+    print("Grade is D")
+elif calculate<59:
+    print("Grade is F")
+
+2. Simple Banking Application
+
+Scenario: Develop a simple banking application where a user can start with an initial balance and then choose to either deposit or withdraw money. 
+The program should ask for the user's initial balance, then present options to deposit or withdraw. 
+After the transaction, it should display the updated balance. 
+Ensure the application does not allow a withdrawal that would lead to a negative balance.
+
+initalbal = float(input("Enter the initial bal for your account"))
+
+option=input("Enter the option for withdraw or deposit")
+
+if option =="withdraw":
+    withdraw = float(input("Enter the withdraw amount from your account"))
+    total=initalbal - withdraw
+    view=input("Do you want to see the total amount")
+    if view == "yes":
+        print("Total remaining bal after withdrawing is :",total)
+    elif view == "no":
+        print("Thankyou, Have a good day!")
+
+
+elif option == "deposit":
+    deposit = float(input("Enter the deposit amount"))
+    total = initalbal + deposit
+    view = input("Do you want to see the total amount")
+    if view == "yes":
+        print("Total remaining bal after withdrawing is :", total)
+    elif view == "no":
+        print("Thankyou, Have a good day!")
+
+print("Thankyou for the transaction in Ranjith Bank..!!!")
+
+
+
+3. Unit Converter
+
+Scenario: Write a program that converts units between different systems. For example, 
+a simple temperature converter from Celsius to Fahrenheit and vice versa. 
+The program should ask the user which conversion they want to perform and then ask for the temperature to convert.
+
+
+Fahrenheit = int(input("Enter the Fahrenheit"))
+Celsius = Fahrenheit - 32 / 8
+
+converter=input("Which temperature converter you would like to use > from Celsius to Fahrenheit ")
+tem = float(input("Enter the temperature"))
+#Celsius to Fahrenheit: (9/5)*(C+32)
+#To convert from Fahrenheit to Celsius:(5/9)*(F-32)
+
+if converter == "Celsius":
+    F=(9/5)*(tem+32)
+    print(F)
+elif converter == "Fahrenheit":
+    C=(5 / 9) * (tem - 32)
+    print(C)
+else:
+    print("Your output!, thankyou :)")
+
+
+
+4. Age Group Classifier
+
+Scenario: Design a program that categorizes people into different age groups based on their age. 
+For example, 'Child' (< 13), 'Teenager' (13-19), 'Adult' (20-65), and 'Senior' (> 65). 
+The program should ask for the person's age and then print out the corresponding age group.
+
+age = int(input("Enter the age of the child"))
+
+if age < 13:
+    print("Child")
+elif age >= 13 and age <=19:
+    print("teenager")
+elif age >=20 and age <=65:
+    print("adult")
+else:
+    print("Senior")
+
+5. Event Ticket Pricing
+
+Scenario: Create a program for an event ticketing system where the ticket price varies based on 
+the age of the attendee and whether they are a student. 
+The base ticket price is a fixed amount, but children under 12 get a 50% discount,
+seniors over 65 get a 30% discount, and students get a 20% discount regardless of age. 
+The program should ask for the attendee's age and if they are a student, 
+then calculate and display the ticket price.
+
+baseticket= 5000
+age = int(input("Enter the age of the person"))
+detail= input("Are you student or working professional")
+if age <12:
+    price=baseticket*0.5
+    print("Ticket for your child is: ",price)
+elif age >=65:
+    price=baseticket*0.3
+    print("Ticket for senior is :", price)
+elif detail == "student":
+    price = baseticket * 0.2
+    print("Ticket for student is :", price)
+else:
+    print("Your ticket price is : ",baseticket)
     
