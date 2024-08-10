@@ -1,0 +1,92 @@
+Problem 1: Temperature Converter
+
+Scenario: Write a program that converts temperature from Fahrenheit to Celsius.
+If the calculated Celsius temperature is above 30, print "It's hot!", otherwise print "It's cool!".
+Example: If a user enters 86, the program should convert it to Celsius (30 degrees Celsius) and output: "It's hot!".
+
+fahrenheit = int(input("Enter the fahrenheit to check Temperature"))
+def fahrenheit_to_celsius(fahrenheit):
+    celsius = (fahrenheit - 32) / 1.8
+    if celsius >=30:
+        print("It's Hot!")
+    else:
+        print("It's cool!")
+    return celsius
+fahrenheit_to_celsius(fahrenheit)
+
+Problem 2: Basic Authentication System
+
+Scenario: Create a simple authentication system where the user provides a username and password. 
+If the username is "admin" and the password is "1234", print "Access granted", otherwise print "Access denied".
+
+
+username=input("Enter the username")
+password=input("Enter the password")
+
+if username == 'admin':
+    if password =='1234':
+        print("Access granted!")
+    else:
+        print("Access denied!")
+else:
+    print("Access denied!")
+
+Problem 3: Grade Calculator
+
+Scenario: Write a program that calculates the final grade of a student based on their score. 
+If the score is 90 or above, it's an 'A', between 80 and 89 is a 'B', between 70 and 79 is a 'C', between 60 and 69 is a 'D', and below 60 is an 'F'.
+
+Example: If a student enters a score of 85, the program should output: "Your grade is B".
+
+score = int(input("Enter the student score"))
+
+if score >=90:
+    print("Grade is 'A'")
+elif score >=80 and score <=89:
+    print("Grade is 'B'")
+elif score >=70 and score <=79:
+    print("Grade is 'C'")
+elif score >=60 and score <=69:
+    print("Grade is 'D'")
+elif score <60:
+    print("Fail")
+
+Problem 4: Age Group Classifier
+
+Scenario: Develop a program that categorizes a person's age group based on their age. 
+If the age is 13 or below, they are a "child", if it's between 14 and 19, they are a "teenager", 
+if it's between 20 and 65, they are an "adult", otherwise, they are a "senior".
+
+Example: If a person enters an age of 34, the output should be: "You are an adult".
+
+age = int(input("Enter the age of the child"))
+
+if age <=13:
+    print("Child")
+elif age>= 14 and age <=19:
+    print("teenager")
+elif age >=20 and age <=65:
+    print("adult")
+else:
+    print("Senior")
+
+Problem 5: Discount Calculator
+
+Scenario: Write a program that applies a discount to a purchase based on the amount.
+If the purchase amount is more than $100, apply a 10% discount. Display the original price, 
+the discount amount, and the final price.
+
+Example: If a user enters an amount of $120, the output should be something like: "Original price: $120, 
+Discount: $12, Final price: $108".
+
+amount = int(input("Enter the amount for the purchase"))
+discount_amt = amount*0.1
+final_price = amount-discount_amt
+
+if amount<100:
+    print("The total purchase amount is",amount)
+elif amount>100:
+    print("The original price is : ",amount)
+    print("The discount amount is :",discount_amt)
+    print("The final price is :",final_price)
+    
