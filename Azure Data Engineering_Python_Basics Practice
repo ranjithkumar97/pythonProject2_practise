@@ -220,4 +220,90 @@ elif detail == "student":
     print("Ticket for student is :", price)
 else:
     print("Your ticket price is : ",baseticket)
+
+A - 3:
+
+Problem 1: Azurelib Academy wants their students to be healthy thus 
+you are asked to develop a simple program to track the number of miles a user has run each day for a week. 
+The program should prompt the user to enter the number of miles they ran each day
+,calculate the total miles run for the week, and display the average miles run per day.
+Implement this program using Python variables, data types,
+ and a while loop with the input function to take input from the user.
+ 
+
+
+#the user to enter the number of miles they ran each day
+
+for i in range(7):
+    eachday = float(input("Enter the miles each day"))
+    days = []
+
+    if i == 0:
+        monday=eachday
+        print("monday",eachday)
+    elif i == 1:
+        tuesday =eachday
+        print("tuesday", eachday)
+    elif i == 2:
+        wednesday =eachday
+        print("wednesday", eachday)
+    elif i == 3:
+        thursday = eachday
+        print("thursday", eachday)
+    elif i ==4:
+        friday = eachday
+        print("friday", eachday)
+    elif i == 5:
+        saturday = eachday
+        print("saturday", eachday)
+    elif i == 6:
+        sunday = eachday
+
+        print("sunday", eachday)
+
+#calculate the total miles run for the week
+total_miles = monday + tuesday + wednesday + thursday + friday + saturday + sunday
+print("Total miles for the week:",total_miles)
+
+#display the average miles run per day
+avgr = total_miles/7
+print("Average miles runs per day is :",avgr)
+
+Problem 2: Write a simple inventory management system for a small store. 
+How would you use Python variables, data types, and a while loop to allow the user 
+to input the quantity of items sold each day for a week, calculate the total sales for the week, 
+and display the average daily sales?
+
+i=0
+daily_sold=[]
+daily_quantity= []
+
+while i <7:
+    item = input("Enter the item sold  ")
+    daily_sold.append(item)
+    quantity = int(input("Enter the item sold"))
+    daily_quantity.append(quantity)
+    i+=1
+print("item sold for the week",daily_sold)
+total_Sale= sum(daily_quantity)
+avgr= total_Sale / 7
+print("sold for the week",total_Sale)
+print("avg sale for the week",avgr)
+
+
+Problem 3: You're tasked with creating a Python program to track the deposits made into a bank account 
+over ten transactions. 
+Using a while loop, prompt the user to input the amount deposited for each transaction.
+After all ten transactions are complete, 
+calculate the total amount deposited into the account and 
+display it to the user.
+
+i=0
+total_deposit = []
+while i <10:
+    deposit = int(input("Enter the deposit amount"))
+    total_deposit.append(deposit)
+    i+=1
+total= sum(total_deposit)
+print("Total deposited amount is :",total)
     
