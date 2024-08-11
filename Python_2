@@ -1,0 +1,29 @@
+class Account:
+    def __init__(self, name, Bal_amount):
+        self.name = name
+        self.Bal_amount = Bal_amount
+
+    def withdraw(self):
+        drawamt = int(input("Enter the amount you want to withdraw: "))
+        if drawamt > self.Bal_amount:
+            print("Insufficient balance!")
+        else:
+            self.Bal_amount -= drawamt
+            print("The balance after the withdrawal is:", self.Bal_amount)
+
+    def deposit(self):
+        depositamt = int(input("Enter the amount you want to deposit: "))
+        self.Bal_amount += depositamt
+        print("The balance after the deposit is:", self.Bal_amount)
+
+print("Welcome to Ranjith's bank")
+print("Which transaction would you like to do now, Deposit or Withdraw?")
+bank = Account("Ranjith", 12000)
+answer = input("Enter the answer: ").lower()
+
+if answer == "deposit":
+    bank.deposit()
+elif answer == "withdraw":
+    bank.withdraw()
+else:
+    print("Thank you, have a great day!")
